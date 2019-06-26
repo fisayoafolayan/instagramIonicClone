@@ -1,17 +1,38 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Instagram Clone</ion-title>
   </ion-navbar>
 </ion-header>
+<ion-content>
+  <!-- this is where the posts will be -->
+  <ion-card class="single-post-home">
+    <ion-item (click)="toProfilePage()">
+      <ion-avatar item-start>
+        <img src="https://res.cloudinary.com/og-tech/image/upload/s--Ivs1sp-J--/c_scale,w_100/v1529311900/og_icon.jpg">
+      </ion-avatar>
+      <h2>capt.og</h2>
+    </ion-item>
+    <img src="https://res.cloudinary.com/og-tech/image/upload/q_40/v1506850322/blog_g3mexb.jpg">
+    <ion-card-content>
+      <p>Zoned Out 💥</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="heart"></ion-icon>
+          <div>12 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small (click)="toCommentSection()">
+          <ion-icon name="text"></ion-icon>
+          <div>4 Comments</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-fab bottom right>
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
 </ion-content>
